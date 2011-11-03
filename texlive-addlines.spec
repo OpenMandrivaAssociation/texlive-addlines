@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/addlines
+# catalog-date 2009-04-24 13:36:42 +0200
+# catalog-license lppl
+# catalog-version 0.2
 Name:		texlive-addlines
 Version:	0.2
 Release:	1
@@ -47,6 +53,7 @@ page in a two-sided document.
 #- source
 %doc %{_texmfdistdir}/source/latex/addlines/addlines.dtx
 %doc %{_texmfdistdir}/source/latex/addlines/addlines.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ page in a two-sided document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
