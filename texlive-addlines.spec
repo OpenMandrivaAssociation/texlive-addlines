@@ -6,7 +6,7 @@
 # catalog-version 0.2
 Name:		texlive-addlines
 Version:	0.2a
-Release:	1
+Release:	2
 Summary:	A user-friendly wrapper around \enlargethispage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/addlines
