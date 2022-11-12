@@ -30,13 +30,10 @@ fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/addlines/addlines.sty
-%doc %{_texmfdistdir}/doc/latex/addlines/README
-%doc %{_texmfdistdir}/doc/latex/addlines/addlines-example.ltx
-%doc %{_texmfdistdir}/doc/latex/addlines/addlines.pdf
+%{_texmfdistdir}/tex/latex/addlines
+%doc %{_texmfdistdir}/doc/latex/addlines
 #- source
-%doc %{_texmfdistdir}/source/latex/addlines/addlines.dtx
-%doc %{_texmfdistdir}/source/latex/addlines/addlines.ins
+%doc %{_texmfdistdir}/source/latex/addlines
 
 #-----------------------------------------------------------------------
 %prep
