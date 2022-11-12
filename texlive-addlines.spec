@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/addlines
-# catalog-date 2009-04-24 13:36:42 +0200
-# catalog-license lppl
-# catalog-version 0.2
 Name:		texlive-addlines
-Version:	0.2a
-Release:	2
+Version:	49326
+Release:	1
 Summary:	A user-friendly wrapper around \enlargethispage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/addlines
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.r49326.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.r49326.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.source.r49326.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ better on the next page. It will also add space to the facing
 page in a two-sided document.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,25 +40,11 @@ page in a two-sided document.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.2-2
-+ Revision: 749084
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.2-1
-+ Revision: 717792
-- texlive-addlines
-- texlive-addlines
-- texlive-addlines
-- texlive-addlines
-- texlive-addlines
-
