@@ -5,9 +5,9 @@ Summary:	A user-friendly wrapper around \enlargethispage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/addlines
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.r49326.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.r49326.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.source.r49326.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
