@@ -1,6 +1,6 @@
 Name:		texlive-addlines
 Version:	49326
-Release:	1
+Release:	2
 Summary:	A user-friendly wrapper around \enlargethispage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/addlines
