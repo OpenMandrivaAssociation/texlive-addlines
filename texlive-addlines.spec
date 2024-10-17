@@ -3,7 +3,7 @@ Version:	49326
 Release:	2
 Summary:	A user-friendly wrapper around \enlargethispage
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/addlines
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/addlines
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.r%{version}.tar.xz
