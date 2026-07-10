@@ -1,47 +1,26 @@
-Name:		texlive-addlines
-Version:	49326
-Release:	2
+%global tl_name addlines
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.3
+Release:	%{tl_revision}.1
 Summary:	A user-friendly wrapper around \enlargethispage
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/addlines
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/addlines.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This small package provides the command \addlines for adding or
-removing space in the textblock of the page it's used on. E.g.,
-adding an extra line of text to the page so that a section fits
-better on the next page. It will also add space to the facing
-page in a two-sided document.
+This small package provides the command \addlines for adding or removing
+space in the textblock of the page it's used on. E.g., adding an extra
+line of text to the page so that a section fits better on the next page.
+It will also add space to the facing page in a two-sided document.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/addlines
-%doc %{_texmfdistdir}/doc/latex/addlines
-#- source
-%doc %{_texmfdistdir}/source/latex/addlines
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
